@@ -1,0 +1,129 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Popins',sans-serif;
+    box-sizing: border-box;
+} 
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 40px;
+}
+.todoApp{
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 20px;
+    border-radius: 10px;
+}
+
+.todoApp h2{
+   color: #002765;
+   display: flex;
+   align-items: center;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+#inputBox{
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    padding: 10px;
+    font-weight: 14px;
+
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #ff5945;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    max-width: 100%;
+
+
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+
+}
+ul li::before{
+content: '';
+position: absolute;
+width: 28px;
+height: 28px;
+border-radius: 50%;
+background-image: url(./images/unchecked.png);
+background-size: cover;
+background-position: center;
+top: 12px;
+left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+background-image: url(./images/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+   width: 40px;
+   height: 40px;
+  font-size: 22px;
+   color: #555;
+   line-height: 40px;
+   text-align: center;
+   
+}
+ul li span:hover{
+    cursor: pointer;
+    background-color: #edeef0;
+    border-radius: 50%;
+}
+@media(max-width:450px)
+{
+   
+    .row{
+        width: 90%;
+        margin-left: -10px;
+    }
+    .btn{
+        padding: 10px 30px;
+        width: 50%;
+        margin-left: -10px;
+    }
+}
+
+@media (max-width:720px) {
+    .todoApp{
+        max-width: 80%;
+       margin-right: 100px;
+
+    }
+    .todoApp h2{
+        color: #002765;
+        display: flex;
+        justify-content: space-between;
+     }
+}
