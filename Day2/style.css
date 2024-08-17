@@ -117,7 +117,7 @@ ul li span:hover{
 
 @media (max-width:720px) {
     .todoApp{
-        max-width: 80%;
+        /* max-width: 80%; */
        margin-right: 100px;
 
     }
